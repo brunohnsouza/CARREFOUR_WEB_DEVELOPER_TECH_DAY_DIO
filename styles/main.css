@@ -1,0 +1,388 @@
+/* Resetar a página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =====================
+   MODO "DARK AND LIGHT" 
+   ===================== */
+/* Configuração da página inteira p/ o modo 'dark and light' */
+:root {
+    --primary-color: #E5ECE8;
+    --secundary-color: #212121;
+    --tertiary-color: #000106;
+}
+.dark-theme {
+    --primary-color: #212121;
+    --secundary-color: #fafafa;
+    --tertiary-color: #fafafa;
+}
+
+/* Configuração do corpo da página atual e ao mudar p/ o modo 'dark' */
+body {
+    background: var(--primary-color);
+    height: 100vh;
+    transition: .3s ease-in-out background, .3s ease-in-out color;
+    background-size: cover;
+}
+
+/* Configuração do ícone do modo 'dark and white' (sol e lua) */
+.fields__theme #icon {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    max-width: 25px;
+    margin: -12px 30px 0 20px;
+    position: relative;
+}
+/* ====================================================================== */
+
+/* ========================
+   ÁREA DO LOGO E NAGEVAÇÃO 
+   ======================== */
+
+/* Container do header */
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+  }
+
+/* Configuração do ícone superior esquerdo do Carrefour */
+.carrefour__icon {
+    margin: 10px 0 0 20px;
+    cursor: pointer;
+}
+.carrefour__icon:hover {
+    opacity: 0.7;
+}
+
+/* Configuração do título 'Carrefour' no canto superior esquerdo */
+.carrefour__text {
+    font-family: 'Arbutus Slab', Arial;
+    font-weight: bold;
+    margin: 0 0 5px -5px;
+    color: #1B4EBE;
+    font-size: 16px;
+}
+
+/* Configuração da mensagem "Bem vindo!" no centro superior */
+.field__welcome .welcome {
+    font-family: 'Arbutus Slab', Arial;
+    font-size: 16px;
+    color: #1B4EBE;
+    margin: -25px 0 0 15px;
+    padding-bottom: 4px;
+}
+
+/* Configuração da mensagem "confira o que preparamos para você :)" no centro superior */
+.field__welcome .news {
+    font-family: 'Arbutus Slab', Arial;
+    font-size: 12px;
+    color: var(--secundary-color);
+    font-weight: normal;
+    margin-left: 15px;
+}
+
+/* Configuração do CARRINHO no canto superior direito */
+.field__welcome .cart {
+    cursor: pointer;
+    margin: -38px 0 0 165px;
+    color: #1B4EBE;
+}
+.field__welcome .cart:hover {
+    opacity: 0.7;
+}
+
+/* ============
+   ÁREA DO MENU 
+   ============*/
+
+/* Links */
+a {
+    color: #1B4EBE;
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:hover {
+    opacity: 0.7;
+}
+
+/* Configuração geral do "nav" */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Arbutus Slab', Arial;
+    height: 8vh;
+    margin: 0 0 15px -20px;
+    z-index: 10;
+}
+
+/* Configuração geral da lista "<ul>" (Lista desordenada) */
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin-left: 50vw;
+}
+
+/* Configuração geral dos itens da lista */
+.nav-list li {
+    margin: 15px 0 0 32px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Configuração geral do "botão menu" (hambúrguer) */
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+/* Configuração do "botão menu" (hambúrguer) */
+.mobile-menu div {
+    width: 18px;
+    height: 2px;
+    background: var(--secundary-color);
+    margin: 5px;
+}
+/* ====================================================================== */
+
+/* Divisor */
+#dividir {
+    border: 1px solid silver;
+}
+/* ====================================================================== */
+
+/* =============
+   ÁREA DE BUSCA 
+   ============= */
+
+/* Campo de busca */
+.field__search {
+    display: flex; 
+    flex-direction: column;
+    margin: 2% 8% 0% 12%;
+}
+#search__box {
+    height: 100%;
+    width: 85%;
+    border: 1px solid #1B4EBE;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+/* ====================================================================== */
+
+/* ===================
+   ÁREA DAS CATEGORIAS 
+   =================== */
+
+/* Título "Comece a sua compra" */
+.field__categories #title {
+   color: var(--secundary-color);
+   font-family: 'Arbutus Slab', Arial;
+   margin: 15px 12px 20px;
+   font-size: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+/* Configuração da <div> com todas as categorias */
+.field__categories .categories__box {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px; 
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+/* Configuração dos todos os botões das categorias */
+.categories__box > button {
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+    color: rgb(61, 61, 61);
+    margin: 3px;
+    background: #fafafa;
+}
+button:hover {
+    opacity: 0.7;
+}
+
+/* Configuração do botão "VEJA TODAS AS CATEGORIAS" */
+.field__more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 12px 20px;
+}
+.field__more #more {
+    font-family: 'Arbutus Slab', Arial;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    padding: 7px 100px;
+    color: #fafafa;
+    background-color: #EE3B1C;
+}
+.field__more:hover {
+    opacity: 0.7;
+}
+/* ====================================================================== */
+
+/* ========================
+   BUSCA POR LOJAS PELO CEP 
+   ======================== */
+
+/* Container da "BUSCA POR CEP" */
+main .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15px;
+}
+
+/* Título "Encontre a loja mais próxima de você usando seu CEP!" */
+#field__title-cep {
+    color: #1B4EBE;
+    font-family: 'Arbutus Slab', Arial;
+    font-size: 20px;
+    margin: 15px 0 20px 0;
+}
+
+/* Instruções */
+#field__instructions-cep {
+    color: var(--secundary-color);
+    font-family: 'Arbutus Slab', Arial;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* Nome "CEP" ao lado da caixa de busca */
+#name-cep {
+    color: var(--secundary-color);
+    font-family: 'Arbutus Slab', Arial; 
+}
+
+/* Caixa de busca */
+.field__form-cep .form-control {
+    height: 30px;
+    width: 70%;
+    border: 1px solid #1B4EBE;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+/* Botão de busca */
+#button__cep {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border: none;
+    color: #fafafa;
+    background-color: #1B4EBE;
+    border-radius: 5px;
+}
+#button__cep:hover {
+    opacity: 0.7;
+}
+
+/* Texto "OBS" em laranja abaixo da caixa de busca */
+#field__obs {
+    font-family: 'Arbutus Slab', Arial;
+    font-size: 12px;
+    color: #EE3B1C;
+    margin-top: 10px;
+}
+/* ====================================================================== */
+/* ==============
+   BUSCA POR LOJA 
+   ============== */
+
+/* Título 'Descubra todos os produtos disponíveis em uma LOJA Carrefour!' */
+#field__title-seller {
+    color: #1B4EBE;
+    font-family: 'Arbutus Slab', Arial;
+    font-size: 20px;
+    margin: 15px 0 20px 0;
+}
+
+/* Instruções */
+#field__instructions-seller {
+    color: var(--secundary-color);
+    font-family: 'Arbutus Slab', Arial;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* Caixa de busca */
+.field__form-seller .form-control {
+    height: 30px;
+    width: 70%;
+    border: 1px solid #1B4EBE;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+/* Nome 'VENDEDOR' */
+#name-seller {
+    color: var(--secundary-color);
+    font-family: 'Arbutus Slab', Arial; 
+}
+
+/* Espaçamento inferior da caixa de texto da 'LOJA' */
+.field__form-seller .form-control {
+    margin-bottom: 50px;
+}
+/* ====================================================================== */
+/* ===============
+   Footer (Rodapé) 
+   =============== */
+
+/* COnfiguração geral do footer */
+.field__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Configuração do logo na parte inferior central */
+.field__footer #logo {
+    max-width: 100px;
+    max-height: 100px;
+}
+#logo:hover {
+    opacity: 0.7;
+}
+
+/* Configuração do '#TechDayCarrefour' */
+.field__footer #description {
+    color: var(--secundary-color);
+    font-family: 'Arbutus Slab', Arial;
+    margin-bottom: 15px;
+}
+/* ====================================================================== */
+/* ==============
+   CONFIGURAÇÕES
+   GLOBAIS 
+   ============== */
+
+/* Configurações de TODOS os botões de busca */
+.button__search {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border: none;
+    color: #fafafa;
+    background-color: #1B4EBE;
+    border-radius: 5px;
+}
+.button__search:hover {
+    opacity: 0.7;
+}

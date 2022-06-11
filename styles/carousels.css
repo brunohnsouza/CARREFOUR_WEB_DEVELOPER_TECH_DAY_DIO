@@ -1,0 +1,97 @@
+/* ============================
+   CONFIGURAÇÃO DO 1° CARROSSEL 
+   ============================ */
+
+/* Configuração do Campo do wallpaper rosa com o 1° Carrossel */
+.field__wallpaper-products {
+    margin-top: 12px;
+    color: #fafafa;
+    background: linear-gradient(rgba(229, 81, 55, 0.5),rgba(229, 81, 55, 0.5)100%), url("/img/wallpaper-pink.jpg");
+    height: 225px;
+    background-size: cover;
+}
+
+/* Configuração do título "Faz Carrefour de Cada" */
+.field__wallpaper-products .info__a {
+    font-family: 'Arbutus Slab', Arial;
+    margin-left: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+/* Configuração do subtítulo "Agora nosso mercado vai onde você esta!" */
+.field__wallpaper-products .info__b {
+    font-family: 'Arbutus Slab', Arial;
+    margin-left: 10px;
+    font-weight: normal;
+    padding-bottom: 5px;
+    font-size: 15px;
+}
+
+/* Configuração dos nomes do 1° Carrossel */
+.field__products-1 .name__products-1 {
+    color: #212121;
+    font-family: 'Arbutus Slab', Arial;
+    font-weight: normal;
+    font-size: 12px;
+    padding-left: 12px;
+}
+
+/* Espaçamento do Carrossel da tela */
+.field__products-1 {
+    padding-left: 5px;
+}
+
+/* ============================
+   CONFIGURAÇÃO DO 2° CARROSSEL 
+   ============================ */
+
+/* Conguração do título "As melhores ofertas para você economizar!" */
+.field__products-2 .field__title {
+    color: #1B4EBE;
+    font-family: 'Arbutus Slab', Arial;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Configuração dos preços em laranja de todos os produtos do 2° Carrossel de itens */
+.carousel__items-2 .price {
+    color: #EE3B1C;
+    margin-left: 12px;
+    font-size: 15px;
+}
+
+/* Configuração dos nomes dos produtos do 2° Carrossel de itens */
+.carousel__items-2 .name__products-2 {
+    color: var(--secundary-color);
+    font-family: 'Arbutus Slab', Arial;
+    font-weight: normal;
+    font-size: 12px;
+    padding-left: 12px;
+    font-size: 12px;
+}
+
+.field__products-2 {
+    padding-left: 5px;
+}
+/* ========================================
+   CONFIGURAÇÕES GERAIS DOS DOIS CARROSSÉIS 
+   ======================================== */
+
+/* Configuração de todas as imagens dos dois carrosséis */
+.images {
+    cursor: pointer;
+    max-height: 110px;
+    max-width: 110px;
+    display: block;
+    border-radius: 10%;
+    padding: 5px;
+}
+.images:hover {
+    opacity: 0.7;
+}
