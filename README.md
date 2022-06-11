@@ -27,6 +27,7 @@
     - Várias telas (demorei, mas a responsividade em várias telas foi realizada com dedicação e esforço).
 
 - **Javascript:**
-    - sem muita experiência (mesmo assim, várias partes foram codificadas com essa linguagem e a bagagem de conhecimento aumentou).
+    - Sem muita experiência (mesmo assim, várias partes foram codificadas com essa linguagem e a bagagem de conhecimento aumentou).
 #
 ## 😀 RESULTADO:
+![Carrefour_Result](https://user-images.githubusercontent.com/103577843/173193249-268b687e-aae8-45b9-b242-e682379aa35f.png)
