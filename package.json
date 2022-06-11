@@ -1,0 +1,9 @@
+{
+  "name": "CARREFOUR_WEB_DESIGN_MOBILE",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "package-lock.json": "^1.0.0"
+  }
+}
