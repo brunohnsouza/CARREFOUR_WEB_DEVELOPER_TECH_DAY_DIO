@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Arquivos CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/carousels.css">
+
+    <!-- Responsividade -->
+    <link rel="stylesheet" href="styles/responsive.css">
+
+    <!-- Owl css -->
+    <link rel="stylesheet" href="styles/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="styles/owl/owl.theme.default.min.css">
+
+    <title>Carrefour | Tech Day</title>
+</head>
+<body>
+    
+    <header>
+        
+        <div class="container">
+            
+            <!-- Ícone superior esquerdo do Carrefour -->
+            <div class="carrefour__icon">
+                <img src="/img/carrefour.png" width="60" alt="carrefour__icon"></a>
+                <h1 class="carrefour__text">Carrefour</h1>
+            </div>
+
+            <!-- Mensagem de boas vindas no centro superior e ícone do carrinho ao lado -->
+            <div class="field__welcome">
+                <h1 class="welcome">Bem vindo!</h1> 
+                <h2 class="news">confira o que preparamos <br />
+                    para você :)</h2>
+                <div class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+
+            <!-- Modo 'dark and light' -->
+            <div class="fields__theme">
+                <img src="/img/moon.png" id="icon" alt="theme">
+            </div>
+
+            <!-- Javascript usado p/ o modo 'dark and light' -->
+            <script defer>
+            var icon = document.getElementById("icon");
+    
+            icon.onclick = function() {
+    
+                document.body.classList.toggle("dark-theme");
+                if(document.body.classList.contains("dark-theme")) {
+                    icon.src = "/img/sun.png";
+                }else {
+                    icon.src = "/img/moon.png";
+                }
+    
+            } 
+            </script>
+
+            <!-- Menu -->
+            <nav>
+                <div class="mobile-menu">
+                    <div class="line-1"></div>
+                    <div class="line-2"></div>
+                    <div class="line-3"></div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#CEP">Busca por <br> CEP</a></li>
+                    <li><a href="#SELLERS">Busca por <br> LOJA</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <hr id="dividir">
+
+    </header>
+
+    <!-- Campo de busca e botão "buscar" -->
+    <div class="field__search">
+        <form>
+            <input type="search" id="search__box" placeholder="Pesquise por produtos ou marcas">
+            <button id="button__go" class="button__search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+
+    <!-- Código Javascript que deixa o 'Campo de busca' utilizável,
+    capaz de jogar a pesquisa no site oficial -->
+    <script type="text/Javascript" defer>
+        const btn = document.getElementById("button__go");
+
+        function openInNewTab() {
+            const search = document.getElementById("search__box").value;
+            const url = `https://www.carrefour.com.br/busca/${search}`;
+
+            if (search !== "") {
+                const win = window.open(url, "_blank")
+                win.focus()
+            } else {
+                alert("Preencha o campo de busca para prosseguirmos.")
+            }
+        }
+
+        btn.addEventListener("click", () => {
+            openInNewTab()
+        })         
+    </script>
+
+    <!-- Corpo do APP -->
+    <main>
+
+        <!-- Informações sobre o 'Carrefour Mercado' na parte superior do carrossel -->
+        <div class="field__wallpaper-products">
+            <h1 class="info__a">Faz Carrefour de Casa</h1>
+            <h2 class="info__b">Agora nosso mercado vai onde você está!</h2>
+
+            <!-- 1° Carrossel de itens -->
+            <div class="field__products-1">
+                <div class="owl-carousel owl-theme">
+                    <div class="item__1">
+                        <img class="images" src="/img/potato.webp" alt="potato">
+                        <h2 class="name__products-1">Batata Monalisa <br>
+                            Aprox. 1Kg</h2>
+                    </div>
+                    <div class="item__2">
+                        <img class="images" src="/img/garlic.jpg" alt="garlic">
+                        <h2 class="name__products-1">Alho a granel <br>
+                            Aprox. 200g</h2>
+                    </div>
+                    <div class="item__3">
+                        <img class="images" src="/img/milk.webp" alt="milk">
+                        <h2 class="name__products-1">Leite Integral <br>
+                            Italac 1L</h2>
+                    </div>
+                    <div class="item__4">
+                        <img class="images" src="/img/soy-oil.webp" alt="soy-oil">
+                        <h2 class="name__products-1">Óleo de Soja <br>
+                            Liza 900ml</h2>
+                    </div>
+                    <div class="item__5">
+                        <img class="images" src="/img/bean.webp" alt="bean">
+                        <h2 class="name__products-1">Feijão Carioca <br>
+                            Camil 1Kg</h2>
+                    </div>
+                    <div class="item__6">
+                        <img class="images" src="/img/sugar.jpg" alt="bean">
+                        <h2 class="name__products-1">Açúcar Refinado <br>
+                            União 1Kg</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Campo de "categorias" -->
+        <div class="field__categories">
+            <h1 id="title">Comece a sua compra</h1>
+            <div class="categories__box">
+                <button id="option-1">Hortifruti</button>
+                <button id="option-2">Mercearia</button>
+                <button id="option-3">Padaria e <br> Matinais</button>
+                <button id="option-4">Limpeza e <br> Lavanderia</button>
+            </div>
+            <div class="field__more">
+                <button id="more">VEJA TODAS AS CATEGORIAS</button>
+            </div>
+        </div>
+
+        <!-- 2° Carrossel de itens -->
+        <div class="field__products-2">
+            <h1 class="field__title">As melhores ofertas para você economizar!</h1>
+            <div class="carousel__items-2">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item__1">
+                            <h2 class="price">R$ 7,99</h2>
+                            <img class="images" src="/img/potato.webp" alt="potato">
+                            <h2 class="name__products-2">Batata Monalisa <br>
+                                Aprox. 1Kg</h2>
+                        </div>
+                        <div class="item__2">
+                            <h2 class="price">R$ 4,11</h2>
+                            <img class="images" src="/img/garlic.jpg" alt="garlic">
+                            <h2 class="name__products-2">Alho a granel <br>
+                                Aprox. 200g</h2>
+                        </div>
+                        <div class="item__3">
+                            <h2 class="price">R$ 4,89</h2>
+                            <img class="images" src="/img/milk.webp" alt="milk">
+                            <h2 class="name__products-2">Leite Integral <br>
+                                Italac 1L</h2>
+                        </div>
+                        <div class="item__4">
+                            <h2 class="price">R$ 9,99</h2>
+                            <img class="images" src="/img/soy-oil.webp" alt="soy-oil">
+                            <h2 class="name__products-2">Óleo de Soja <br>
+                                Liza 900ml</h2>
+                        </div>
+                        <div class="item__5">
+                            <h2 class="price">R$ 8,29</h2>
+                            <img class="images" src="/img/bean.webp" alt="bean">
+                            <h2 class="name__products-2">Feijão Carioca <br>
+                                Camil 1Kg</h2>
+                        </div>
+                        <div class="item__6">
+                            <h2 class="price">R$ 3,99</h2>
+                            <img class="images" src="/img/sugar.jpg" alt="bean">
+                            <h2 class="name__products-2">Açúcar Refinado <br>
+                                União 1Kg</h2>
+                        </div>
+                        <div class="item__7">
+                            <h2 class="price">R$ 6,89</h2>
+                            <img class="images" src="/img/chocolate.webp" alt="nescau">
+                            <h2 class="name__products-2">Achocolatado em <br>
+                                Pó Nescau 370g</h2>
+                        </div>
+                        <div class="item__8">
+                            <h2 class="price">R$ 14,90</h2>
+                            <img class="images" src="/img/eggs.webp" alt="eggs">
+                            <h2 class="name__products-2">Ovo Branco <br>
+                                20 Unidades</h2>
+                        </div>
+                        <div class="item__9">
+                            <h2 class="price">R$ 18,15</h2>
+                            <img class="images" src="/img/washing.webp" alt="OMO">
+                            <h2 class="name__products-2">Lava Roupas Pó<br>
+                                OMO 1,6Kg</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção da "BUSCA POR CEP" -->
+        <section id="CEP">
+            <div class="container">
+                <h1 id="field__title-cep">Encontre a loja mais próxima de você usando seu CEP!</h1>
+                <h2 id="field__instructions-cep">
+                    1° - Abra seu console; <br>
+                    2° - Digite seu CEP (válido) na caixa de texto; <br> 
+                    3° - Confirme com a tecla "Enter"; <br>
+                    4° - Clique em "XHR" e depois em "Resposta"; <br>
+                    5° - Veja a lista (sellers) de lojas mais próximas de você!
+                </h2>
+                <form>    
+                    <div class="field__form-cep">
+                        <label for="cep" id="name-cep">CEP</label>
+                        <input type="text" class="form-control" placeholder="00000-000" maxlength="9" id="cep"> 
+                        <button id="button__cep" class="button__search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </form>
+                <h3 id="field__obs">OBS.: A lista está em ordem de proximidade!</h3>
+            </div>
+        </section>   
+
+        <!-- Seção da "BUSCA POR SELLER" -->
+        <section id="SELLERS">
+            <div class="container">
+                <h1 id="field__title-seller">Descubra todos os produtos disponíveis em uma LOJA Carrefour!</h1>
+                <h2 id="field__instructions-seller">
+                    1° - Abra seu console; <br>
+                    2° - Digite o nome da LOJA na caixa de texto; <br> 
+                    3° - Confirme com a tecla "Enter"; <br>
+                    4° - Clique em "XHR" e depois em "Resposta"; <br>
+                    5° - Veja os produtos (productName) da loja procurada!
+                </h2>
+                <form>    
+                    <div class="field__form-seller">
+                        <label for="seller" id="name-seller">LOJA</label>
+                        <input type="text" class="form-control" placeholder="carrefourbr1056" maxlength="19" id="seller__name"> 
+                        <button id="button__seller" class="button__search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Ferramentas usadas -->
+    <script src="https://kit.fontawesome.com/4ddcf64cd5.js" crossorigin="anonymous"></script>
+    <script src="js/mobile-navbar.js"></script>
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/carousels-items.js"></script>
+    <script src="js/CEP.js"></script>
+    <script src="js/SELLERS.js"></script>
+   
+    <!-- Rodapé -->
+    <footer class="field__footer">
+        <a href="https://www.carrefour.com.br/">
+            <img id="logo" src="img/carrefour.png" alt="logo">
+        </a>
+        <h3 id="description">#TechDayCarrefour</h3>
+    </footer>
+</body>
+</html>
