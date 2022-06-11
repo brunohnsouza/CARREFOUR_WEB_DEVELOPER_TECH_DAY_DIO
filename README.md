@@ -1,8 +1,8 @@
 # 🚀 INFORMAÇÕES SOBRE ESSE PROJETO
 ## 🔎 OBJETIVO:
 - Consumir dois EndPoints disponibilizados pelo Carrefour.
-    - **Buscar Pontos de Vendas Por CEP (1° EndPoint):** ao digitar seu CEP, uma lista com LOJAS Carrefour mais próximas será retornada;
-    - **Buscar Produtos Por Ponto de Venda (2° EndPoint):** ao digitar o nome da LOJA Carrefour, uma lista de produtos disponíveis naquela LOJA será retornada.
+    - **Buscar Pontos de Vendas Por CEP (1° EndPoint):** ao digitar seu CEP, uma lista com LOJAS Carrefour mais próximas será retornada no console;
+    - **Buscar Produtos Por Ponto de Venda (2° EndPoint):** ao digitar o nome da LOJA Carrefour, uma lista de produtos disponíveis naquela LOJA será retornada no console.
 ## 🔧 FERRAMENTAS E TECNOLOGIAS USADAS:
 - **Front-end:** HTML, CSS e JAVASCRIPT;
 - **Plug-in JQuery:** Own-Carousel 2.
