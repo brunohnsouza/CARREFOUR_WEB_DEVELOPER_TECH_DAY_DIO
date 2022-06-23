@@ -7,8 +7,9 @@
     margin-top: 12px;
     color: #fafafa;
     background: linear-gradient(rgba(229, 81, 55, 0.5),rgba(229, 81, 55, 0.5)100%), url("/img/wallpaper-pink.jpg");
-    height: 225px;
+    height: 270px;
     background-size: cover;
+    z-index: 0;
 }
 
 /* Configuração do título "Faz Carrefour de Cada" */
@@ -33,13 +34,16 @@
     color: #212121;
     font-family: 'Arbutus Slab', Arial;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 14px;
     padding-left: 12px;
 }
 
 /* Espaçamento do Carrossel da tela */
 .field__products-1 {
-    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 7px;
 }
 
 /* ============================
@@ -61,8 +65,9 @@
 
 /* Configuração dos preços em laranja de todos os produtos do 2° Carrossel de itens */
 .carousel__items-2 .price {
+    font-weight: bold;
     color: #EE3B1C;
-    margin-left: 12px;
+    margin-left: 14px;
     font-size: 15px;
 }
 
@@ -71,13 +76,15 @@
     color: var(--secundary-color);
     font-family: 'Arbutus Slab', Arial;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 14px;
     padding-left: 12px;
     font-size: 12px;
+   
+    transition: .7s ease-in-out color;
 }
 
 .field__products-2 {
-    padding-left: 5px;
+    padding-left: 7px;
 }
 /* ========================================
    CONFIGURAÇÕES GERAIS DOS DOIS CARROSSÉIS 
@@ -85,12 +92,15 @@
 
 /* Configuração de todas as imagens dos dois carrosséis */
 .images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    max-height: 110px;
-    max-width: 110px;
-    display: block;
-    border-radius: 10%;
+    max-height: 250px;
+    max-width: 140px;
+    border-radius: 15px;
     padding: 5px;
+    z-index: 1;
 }
 .images:hover {
     opacity: 0.7;
