@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    height: 100%;
+    width: 100%;
+}
 
 /* =====================
    MODO "DARK AND LIGHT" 
@@ -23,8 +27,8 @@
 /* Configuração do corpo da página atual e ao mudar p/ o modo 'dark' */
 body {
     background: var(--primary-color);
-    height: 100vh;
-    transition: .3s ease-in-out background, .3s ease-in-out color;
+    height: 100%;
+    transition: .7s ease-in-out background, .7s ease-in-out color;
     background-size: cover;
 }
 
@@ -70,7 +74,7 @@ header .container {
 }
 
 /* Configuração da mensagem "Bem vindo!" no centro superior */
-.field__welcome .welcome {
+.field__welcome-cart .welcome {
     font-family: 'Arbutus Slab', Arial;
     font-size: 16px;
     color: #1B4EBE;
@@ -79,21 +83,23 @@ header .container {
 }
 
 /* Configuração da mensagem "confira o que preparamos para você :)" no centro superior */
-.field__welcome .news {
+.field__welcome-cart .news {
     font-family: 'Arbutus Slab', Arial;
     font-size: 12px;
     color: var(--secundary-color);
     font-weight: normal;
     margin-left: 15px;
+    
+    transition: .7s ease-in-out color;
 }
 
 /* Configuração do CARRINHO no canto superior direito */
 .field__welcome .cart {
     cursor: pointer;
-    margin: -38px 0 0 165px;
+    margin: -40px 0 0 165px;
     color: #1B4EBE;
 }
-.field__welcome .cart:hover {
+.field__welcome-cart .cart:hover {
     opacity: 0.7;
 }
 
@@ -119,14 +125,13 @@ nav {
     font-family: 'Arbutus Slab', Arial;
     height: 8vh;
     margin: 0 0 15px -20px;
-    z-index: 10;
 }
 
 /* Configuração geral da lista "<ul>" (Lista desordenada) */
 .nav-list {
     list-style: none;
     display: flex;
-    margin-left: 50vw;
+    margin-left: 30vw;
 }
 
 /* Configuração geral dos itens da lista */
@@ -134,6 +139,7 @@ nav {
     margin: 15px 0 0 32px;
     letter-spacing: 2px;
     font-weight: bold;
+    padding: 20px;
 }
 
 /* Configuração geral do "botão menu" (hambúrguer) */
@@ -148,6 +154,8 @@ nav {
     height: 2px;
     background: var(--secundary-color);
     margin: 5px;
+    
+    transition: .7s background ease-in-out;
 }
 /* ====================================================================== */
 
@@ -164,12 +172,14 @@ nav {
 /* Campo de busca */
 .field__search {
     display: flex; 
-    flex-direction: column;
-    margin: 2% 8% 0% 12%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
 #search__box {
-    height: 100%;
-    width: 85%;
+    height: 30px;
+    width: 80vw;
     border: 1px solid #1B4EBE;
     border-radius: 5px;
     padding-left: 5px;
@@ -184,20 +194,22 @@ nav {
 .field__categories #title {
    color: var(--secundary-color);
    font-family: 'Arbutus Slab', Arial;
-   margin: 15px 12px 20px;
+   margin: 20px 0 20px;
    font-size: 20px;
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
+   justify-content: center;
    align-items: center;
+    
+   transition: .7s ease-in-out color;
 }
 
 /* Configuração da <div> com todas as categorias */
 .field__categories .categories__box {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin-bottom: 15px; 
-    margin-left: 15%;
-    margin-right: 15%;
 }
 
 /* Configuração dos todos os botões das categorias */
@@ -205,9 +217,8 @@ nav {
     cursor: pointer;
     border: none;
     border-radius: 7px;
-    padding: 5px;
+    padding: 10px;
     color: rgb(61, 61, 61);
-    margin: 3px;
     background: #fafafa;
 }
 button:hover {
@@ -217,9 +228,10 @@ button:hover {
 /* Configuração do botão "VEJA TODAS AS CATEGORIAS" */
 .field__more {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    margin: 0 12px 20px;
+    margin-bottom: 20px;
 }
 .field__more #more {
     font-family: 'Arbutus Slab', Arial;
@@ -227,7 +239,7 @@ button:hover {
     cursor: pointer;
     border: none;
     border-radius: 7px;
-    padding: 7px 100px;
+    padding: 1vh 10vw;
     color: #fafafa;
     background-color: #EE3B1C;
 }
@@ -244,6 +256,7 @@ button:hover {
 main .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-left: 15px;
 }
@@ -253,7 +266,7 @@ main .container {
     color: #1B4EBE;
     font-family: 'Arbutus Slab', Arial;
     font-size: 20px;
-    margin: 15px 0 20px 0;
+    margin-bottom: 20px;
 }
 
 /* Instruções */
@@ -261,44 +274,34 @@ main .container {
     color: var(--secundary-color);
     font-family: 'Arbutus Slab', Arial;
     font-size: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    
+    transition: .7s ease-in-out color;
 }
 
 /* Nome "CEP" ao lado da caixa de busca */
 #name-cep {
     color: var(--secundary-color);
     font-family: 'Arbutus Slab', Arial; 
+    
+    transition: .7s ease-in-out color;
 }
 
 /* Caixa de busca */
 .field__form-cep .form-control {
     height: 30px;
-    width: 70%;
+    width: 40vw;
     border: 1px solid #1B4EBE;
     border-radius: 5px;
     padding-left: 5px;
 }
 
-/* Botão de busca */
-#button__cep {
-    cursor: pointer;
-    height: 30px;
-    width: 30px;
-    border: none;
-    color: #fafafa;
-    background-color: #1B4EBE;
-    border-radius: 5px;
-}
-#button__cep:hover {
-    opacity: 0.7;
-}
-
 /* Texto "OBS" em laranja abaixo da caixa de busca */
 #field__obs {
     font-family: 'Arbutus Slab', Arial;
-    font-size: 12px;
+    font-size: 15px;
     color: #EE3B1C;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 /* ====================================================================== */
 /* ==============
@@ -319,12 +322,14 @@ main .container {
     font-family: 'Arbutus Slab', Arial;
     font-size: 12px;
     margin-bottom: 10px;
+    
+    transition: .7s ease-in-out color;
 }
 
 /* Caixa de busca */
 .field__form-seller .form-control {
     height: 30px;
-    width: 70%;
+    width: 40vw;
     border: 1px solid #1B4EBE;
     border-radius: 5px;
     padding-left: 5px;
@@ -334,6 +339,8 @@ main .container {
 #name-seller {
     color: var(--secundary-color);
     font-family: 'Arbutus Slab', Arial; 
+    
+    transition: .7s ease-in-out color;
 }
 
 /* Espaçamento inferior da caixa de texto da 'LOJA' */
