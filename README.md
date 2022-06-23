@@ -25,9 +25,4 @@
 
 - **Javascript:**
     - Sem muita experiência (mesmo assim, várias partes foram codificadas com essa linguagem e a bagagem de conhecimento aumentou).
-## 😀 RESULTADO:
-
-
-
-https://user-images.githubusercontent.com/103577843/173231576-f9ccbbb9-605f-4e68-b18d-2366de275264.mp4
 
