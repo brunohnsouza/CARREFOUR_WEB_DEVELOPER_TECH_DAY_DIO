@@ -16,11 +16,12 @@ const sellerInvalid = [
 /* 'searchSeller' buscará os produtos com base na LOJA digitada.
 A estrutura condicional 'if' verificará se o nome digitado está disponível
 lá em 'sellerNames' */
-function searchSeller() {
+function searchSeller(event) {
   
   const seller = document.getElementById('seller__name').value.replace(" ","");
   const url = `https://mercado.carrefour.com.br/api/catalog_system/pub/products/search?fq=${seller}`;
   
+  if (event.type === 'click') event.preventDefault();
   if ((seller !== sellerInvalid[0]) &&
       (seller !== sellerInvalid[1]) &&
       (seller !== sellerInvalid[2])){
@@ -34,7 +35,8 @@ function searchSeller() {
 
 /* Ao clicar no botão do SELLER (ou der um 'Enter'), 
 entrará na função 'searchSeller' */
-btn_seller.addEventListener("click", () => {
-  searchSeller()
-})
+btn_seller.addEventListener("click", searchSeller);
+
+/* Evento adicional caso o 'click' não funcione */
+document.getElementById('seller__name').addEventListener('blur', searchSeller);
    
