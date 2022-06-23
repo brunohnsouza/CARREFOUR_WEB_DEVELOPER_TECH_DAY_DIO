@@ -4,7 +4,7 @@
 
 /* "botão menu" (hambúrguer).
 Enquanto a tela for menor que 1050px, esse botão estará disponível */
-@media (max-width: 1050px) {
+@media (max-width: 999px) {
     body {
         overflow-x: hidden;
     }
@@ -19,7 +19,9 @@ Enquanto a tela for menor que 1050px, esse botão estará disponível */
         align-items: center;
         justify-content: space-around;
         transform: translateX(100%);
-        transition: transform 0.3s ease-in;
+        z-index: 10;
+
+        transition: transform 0.3s ease-in, .7s ease-in-out background;
     }
     .nav-list li {
         margin-left: 0;
@@ -34,6 +36,21 @@ Enquanto a tela for menor que 1050px, esse botão estará disponível */
     transform: translateX(0);
 }
 
+/* Rotação do 'Hambúrguer' p/ virar um 'X' */
+.mobile-menu.active .line-1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+
+    transition: transform 0.3s ease-in-out;
+}
+.mobile-menu.active .line-2 {
+    opacity: 0;
+}
+.mobile-menu.active .line-3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+
+    transition: transform 0.3s ease-in-out;
+}
+
 /* Aqui dará uma opacidade aos links */
 @keyframes navLinkFade {
     from {
@@ -46,231 +63,14 @@ Enquanto a tela for menor que 1050px, esse botão estará disponível */
     }
 }
 /* ====================================================================== */
-/* ===========================================================
-   RESPONSIVIDADE DO 'BOTÃO MENU' (HAMBÚRGUER) EM VÁRIAS TELAS
-   ===========================================================*/
-
-@media (min-width: 360px) and (max-width:400px) {
-    .nav-list {
-        position: absolute;
-        top: 12vh;
-        right: 0;
-        width: 50vw;
-        height: 30vh;
-        background: var(--primary-color);
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-    }
-}
-@media (min-width: 430px) and (max-width:500px) {
-    .nav-list {
-        position: absolute;
-        top: 12vh;
-        right: 0;
-        width: 50vw;
-        height: 30vh;
-        background: var(--primary-color);
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-    }
-    .nav-list li {
-        margin-left: -50px;
-        opacity: 0;    
-    }
-}
-@media (min-width: 500px) and (max-width:600px) {
-    .nav-list {
-        position: absolute;
-        top: 12vh;
-        right: 0;
-        width: 50vw;
-        height: 30vh;
-        background: var(--primary-color);
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-    }
-    .nav-list li {
-        margin-left: -70px;
-        opacity: 0;    
-    }
-}
-@media (min-width: 600px) and (max-width:700px) {
-    .nav-list {
-        position: absolute;
-        top: 12vh;
-        right: 0;
-        width: 50vw;
-        height: 30vh;
-        background: var(--primary-color);
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-    }
-    .nav-list li {
-        margin-left: -100px;
-        opacity: 0;    
-    }
-}
-@media (min-width: 700px) and (max-width:800px) {
-    .nav-list {
-        position: absolute;
-        top: 12vh;
-        right: 0;
-        width: 50vw;
-        height: 30vh;
-        background: var(--primary-color);
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-    }
-    .nav-list li {
-        margin-left: -150px;
-        opacity: 0;    
-    }
-}
-@media (min-width: 800px) and (max-width:900px) {
-    .nav-list {
-        position: absolute;
-        top: 12vh;
-        right: 0;
-        width: 50vw;
-        height: 30vh;
-        background: var(--primary-color);
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-    }
-    .nav-list li {
-        margin-left: -200px;
-        opacity: 0;    
-    }
-}
-@media (min-width: 900px) and (max-width:930px) {
-    .nav-list {
-        position: absolute;
-        top: 12vh;
-        right: 0;
-        width: 50vw;
-        height: 30vh;
-        background: var(--primary-color);
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-    }
-    .nav-list li {
-        margin-left: -250px;
-        opacity: 0;    
-    }
-}
-@media (min-width: 930px) and (max-width:1000px) {
-    .nav-list {
-        position: absolute;
-        top: 12vh;
-        right: 0;
-        width: 50vw;
-        height: 30vh;
-        background: var(--primary-color);
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-    }
-    .nav-list li {
-        margin-left: -300px;
-        opacity: 0;    
-    }
-}
-@media (min-width: 1000px) and (max-width:1040px) {
-    .nav-list {
-        position: absolute;
-        top: 12vh;
-        right: 0;
-        width: 50vw;
-        height: 30vh;
-        background: var(--primary-color);
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-    }
-    .nav-list li {
-        margin-left: -350px;
-        opacity: 0;    
-    }
-}
-/* ====================================================================== */
 /* ================================================
    RESPONSIVIDADE DO CABEÇALHO 'CARREFOUR' E ÍCONES
    ================================================*/
    
-
-@media screen and (min-width:430px) and (max-width:500px) {
+@media screen and (min-width:430px){
     header .container {
-        left: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
-@media screen and (min-width:500px) and (max-width:570px) {
-    header .container {
-        left: 12%;
-    }
-}
-@media screen and (min-width:570px) and (max-width:640px) {
-    header .container {
-        left: 16%;
-    }
-}
-@media screen and (min-width:640px) and (max-width:730px) {
-    header .container {
-        left: 20%;
-    }
-}
-@media screen and (min-width:730px) and (max-width:800px) {
-    header .container {
-        left: 24%;
-    }
-}
-@media screen and (min-width:800px) and (max-width:890px) {
-    header .container {
-        left: 28%;
-    }
-}
-@media screen and (min-width:890px) and (max-width:950px) {
-    header .container {
-        left: 28%;
-    }
-}
-@media screen and (min-width:950px) and (max-width:1020px) {
-    header .container {
-        left: 32%;
-    }
-}
-@media screen and (min-width:1020px) and (max-width:1040px) {
-    header .container {
-        left: 36%;
-    }
-}
-@media screen and (min-width:1080px) {
-    header .container {
-        left: 2%;
-    }
-}
-
