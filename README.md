@@ -1,28 +1,32 @@
-# 🚀 INFORMAÇÕES SOBRE ESSE PROJETO
-## 🔎 OBJETIVO:
-- Consumir dois EndPoints disponibilizados pelo Carrefour.
-    - **Buscar Pontos de Vendas Por CEP (1° EndPoint):** ao digitar seu CEP, uma lista com LOJAS Carrefour mais próximas será retornada no console;
-    - **Buscar Produtos Por Ponto de Venda (2° EndPoint):** ao digitar o nome da LOJA Carrefour, uma lista de produtos disponíveis naquela LOJA será retornada no console.
-## 🔧 FERRAMENTAS E TECNOLOGIAS USADAS:
+# 🚀 INFORMATIONS:
+
+### 🔎 OBJECTIVE: *Consume two EndPoints provided by Carrefour.*
+- **Search Points of Sale By CEP (1st EndPoint):** when typing your CEP, a list with the nearest Carrefour STORES will be returned in the console;
+- **Search Products By Point of Sale (2nd EndPoint):** when typing the name of the Carrefour STORE, a list of products available in that STORE will be returned in the console.
+
+### 🔧 TOOLS AND TECHNOLOGIES USED:
 - **Front-end:** HTML, CSS e JAVASCRIPT;
 - **Plug-in JQuery:** Own-Carousel 2.
-## 💡 IDEIAS IMPLEMENTADAS:
-- **‘Modo Escuro’:**
-    - Ajuda usuários com _fotofobia_ (sensibilidade à luz);
-    - Prevenção contra problemas visuais;
-    - Menor emissão de ‘luz azul’.
-- **Mobile First:**
-    - Características de um dispositivo móvel;
-    - Desenvolvido em resolução 360 x 640 (Galaxy Note 3).
-- **Barra de pesquisa utilizável:**
-    - Redireciona para o site oficial.
-## 🧗 DIFICULDADES E SUPERAÇÕES:
-- **Utilização dos EndPoints:** 
-    - Problemas com o ‘Cors’ (apesar dos resultados não serem exibidos na tela convencional, o resultado funcionou no console).
 
-- **Responsividade:** 
-    - Várias telas (demorei, mas a responsividade em várias telas foi realizada com dedicação e esforço).
+### 💡 IDEAS IMPLEMENTED:
+- **Dark theme:**
+    - It helps users with **_photophobia_** (sensitivity to light);
+    - Prevention of visual problems;
+    - Less emission of **_blue light_**.
+    
+- **Mobile First:**
+    - Features of a mobile device;
+    - Developed in 360 x 640 resolution (Galaxy Note 3).
+    
+- **Usable search bar:**
+    - Redirects to the official website.
+    
+### 🧗 DIFFICULTIES AND OVERCOMES:
+- **Use of EndPoints:** 
+    - Problems with 'Cors' (although the results are not displayed on the conventional screen, the result worked on the console).
+
+- **Responsiveness:** 
+    - Multiple screens (it took me a while, but the multi-screen responsiveness was accomplished with dedication and effort).
 
 - **Javascript:**
-    - Sem muita experiência (mesmo assim, várias partes foram codificadas com essa linguagem e a bagagem de conhecimento aumentou).
-
+    - Without much experience (even so, several parts were coded with this language and the baggage of knowledge increased).
