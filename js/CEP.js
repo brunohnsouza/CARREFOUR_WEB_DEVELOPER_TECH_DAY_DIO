@@ -28,7 +28,4 @@ function searchCep(event) {
 /* Ao clicar no botão do CEP (ou der um 'Enter'), 
 entrará na função 'searchCep' */
 btn_cep.addEventListener("click", searchCep);
-
-/* Evento adicional caso o 'click' não funcione */
-document.getElementById('cep').addEventListener('blur', searchCep);
     
