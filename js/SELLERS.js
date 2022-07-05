@@ -36,7 +36,4 @@ function searchSeller(event) {
 /* Ao clicar no botão do SELLER (ou der um 'Enter'), 
 entrará na função 'searchSeller' */
 btn_seller.addEventListener("click", searchSeller);
-
-/* Evento adicional caso o 'click' não funcione */
-document.getElementById('seller__name').addEventListener('blur', searchSeller);
    
