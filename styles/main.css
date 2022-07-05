@@ -94,7 +94,7 @@ header .container {
 }
 
 /* Configuração do CARRINHO no canto superior direito */
-.field__welcome .cart {
+.field__welcome-cart .cart {
     cursor: pointer;
     margin: -40px 0 0 165px;
     color: #1B4EBE;
